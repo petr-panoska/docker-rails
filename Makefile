@@ -2,6 +2,6 @@ build:
 	docker --version
 	docker compose build app
 setup:
-	docker compose run app bin/setup
+	docker compose run app bin/setup --skip-server
 exec-console:
-	docker compose exec app rails console
+	docker compose run app rails console
